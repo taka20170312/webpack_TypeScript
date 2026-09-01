@@ -1,0 +1,21 @@
+1. ターミナルを起動してsrc/app1ディレクトリへ移動 ※VScode起動時にapp1フォルダを選択している場合は不要
+cd src/app1
+
+2. 以下コマンドを実行
+../../node_modules/.bin/webpack --config webpack.config.js
+
+3. public/js配下のapp_app1_desktop.jsをPC用のJavaScriptに設定
+※ cli-kintoneを使用する場合は5.のコマンドを実行
+
+4. public/js配下のapp_app1_mobile.jsをモバイル用のJavaScriptに設定
+※ cli-kintoneを使用する場合は5.のコマンドを実行
+
+5. cli-kintoneソースアップロードコマンド
+cli-kintone customize apply \
+  --base-url https://${yourDomain}.cybozu.com \
+  --app ${appId} \
+  --username ${username} \
+  --password ${password} \
+  --input customize-manifest.json \
+  --proxy ${proxy URL ※プロキシを設定する場合}\
+  --yes

@@ -1,0 +1,15 @@
+{
+    "scope": "ALL",
+    "desktop": {
+        "js": [
+            "./public/js/app_app1_desktop.js"
+        ],
+        "css": []
+    },
+    "mobile": {
+        "js": [
+            "./public/js/app_app1_mobile.js"
+        ],
+        "css": []
+    }
+}
