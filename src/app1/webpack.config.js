@@ -18,12 +18,12 @@ const desktop = {
         loader: 'vue-loader',
       },
       {
-        test: /\.js$/,
+        test: /\.[jt]s$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env', '@babel/preset-typescript']
           }
         }
       },
@@ -56,6 +56,7 @@ const desktop = {
     })
   ],
   resolve: {
+    extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
       'vue': 'vue/dist/vue.esm-bundler.js'
     }
@@ -78,12 +79,12 @@ const mobile = {
         }
       },
       {
-        test: /\.js$/,
+        test: /\.[jt]s$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env', '@babel/preset-typescript']
           }
         }
       },
@@ -116,6 +117,7 @@ const mobile = {
     })
   ],
   resolve: {
+    extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
       'vue': 'vue/dist/vue.esm-bundler.js'
     }
