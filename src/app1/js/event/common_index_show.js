@@ -5,8 +5,8 @@
  * @author INET
  */
 
-import momoHtml from '../../html/test.html';
-import '../../css/test.css';
+import momoHtml from "../../html/test.html";
+import "../../css/test.css";
 
 const func = {
   /**
@@ -19,7 +19,8 @@ const func = {
   exec(event) {
     // 画像表示
     const space = kintone.app.getHeaderMenuSpaceElement();
-    const html = new DOMParser().parseFromString(momoHtml, 'text/html').body.firstElementChild;
+    const html = new DOMParser().parseFromString(momoHtml, "text/html").body
+      .firstElementChild;
     if (space) {
       space.append(html);
     }
